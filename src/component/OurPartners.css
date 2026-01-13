@@ -1,0 +1,74 @@
+.our-partners {
+  background-color: #eaeaea; /* Light gray background */
+  padding: 6rem 2rem;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: #2a2a2a;
+}
+
+.section-title {
+  font-size: 0.875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #444;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.section-body {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #333;
+}
+
+.section-body p {
+  margin: 0.5rem 0;
+}
+
+.partner-button {
+  background: transparent;
+  border: 1px solid #666;
+  border-radius: 30px;
+  padding: 0.75rem 2rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.partner-button:hover {
+  background-color: #f0f0f0;
+  border-color: #444;
+  color: #2a2a2a;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .our-partners {
+    padding: 4rem 1rem;
+  }
+
+  .section-title {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+  }
+
+  .section-body {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 0 1rem;
+  }
+
+  .partner-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}

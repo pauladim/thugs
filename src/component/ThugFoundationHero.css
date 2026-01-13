@@ -1,0 +1,149 @@
+.hero-section {
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 6rem 2rem;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-subtite {
+  font-size: 0.875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color:#1a332b !important ;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  transition: all 0.3s ease;
+}
+
+.hero-subtite:hover {
+  color: #CC7722 !important;
+  transform: scale(1.05);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #1a332b; /* Dark green — matches your brand? */
+  margin: 0 0 1.5rem 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.hero-title:hover {
+  color: #CC7722;
+  transform: scale(1.02);
+}
+
+.hero-body {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.hero-body:hover {
+  color: #555;
+  transform: translateX(5px);
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-section {
+    padding: 5rem 2rem;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-subtite {
+    font-size: 0.8rem;
+  }
+  
+  .hero-body {
+    font-size: 0.98rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 4rem 1.5rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtite {
+    font-size: 0.75rem;
+  }
+  
+  .hero-body {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 3rem 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .hero-subtite {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.8rem;
+  }
+  
+  .hero-body {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding: 0 0.5rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .hero-section {
+    padding: 2.5rem 0.8rem;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtite {
+    font-size: 0.65rem;
+  }
+  
+  .hero-body {
+    font-size: 0.85rem;
+  }
+}

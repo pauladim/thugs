@@ -1,0 +1,455 @@
+/* DrugFree20 Page Styles */
+.drugfree20-container {
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+}
+
+.initiative-hero {
+  background: linear-gradient(135deg, #CC7722, #E6A85C);
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.initiative-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.initiative-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.initiative-overview,
+.education-programs,
+.resources,
+.success-stories,
+.get-involved {
+  padding: 5rem 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.initiative-overview h2,
+.education-programs h2,
+.resources h2,
+.success-stories h2,
+.get-involved h2 {
+  font-size: 2.5rem;
+  color: #CC7722;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.initiative-overview p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.initiative-goals h3 {
+  font-size: 1.5rem;
+  color: #CC7722;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.initiative-goals ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.initiative-goals li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.initiative-goals li:before {
+  content: "•";
+  color: #CC7722;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.program-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+}
+
+.program-card h3 {
+  font-size: 1.4rem;
+  color: #CC7722;
+  margin-bottom: 1rem;
+}
+
+.program-card p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.program-stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.stat {
+  font-weight: 600;
+  color: #333;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.resource-card {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.resource-card h3 {
+  font-size: 1.4rem;
+  color: #CC7722;
+  margin-bottom: 1rem;
+}
+
+.resource-card p {
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.contact-info {
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.btn {
+  background: #CC7722;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  min-width: 120px; /* Ensure minimum touch target size */
+}
+
+.btn:hover {
+  background: #a65f1a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(204, 119, 34, 0.3);
+}
+
+.btn-secondary {
+  background: #1D6A54;
+}
+
+.btn-secondary:hover {
+  background: #165241;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.story-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.story-card::before {
+  content: "\201C"; /* Left double quotation mark Unicode */
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 4rem;
+  color: #CC7722;
+  opacity: 0.2;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.story-card h3 {
+  font-size: 1.3rem;
+  color: #CC7722;
+  margin-bottom: 1rem;
+}
+
+.story-card p {
+  font-style: italic;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.story-card cite {
+  font-style: normal;
+  color: #CC7722;
+  font-weight: 600;
+}
+
+.involvement-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.option {
+  text-align: center;
+  padding: 2rem;
+}
+
+.option h3 {
+  font-size: 1.4rem;
+  color: #CC7722;
+  margin-bottom: 1rem;
+}
+
+.option p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 992px) {
+  .initiative-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .initiative-overview h2,
+  .education-programs h2,
+  .resources h2,
+  .success-stories h2,
+  .get-involved h2 {
+    font-size: 2.2rem;
+  }
+  
+  .initiative-overview,
+  .education-programs,
+  .resources,
+  .success-stories,
+  .get-involved {
+    padding: 4rem 1.5rem;
+  }
+  
+  .program-card,
+  .resource-card,
+  .story-card {
+    padding: 1.8rem;
+  }
+  
+  .program-card h3,
+  .resource-card h3,
+  .story-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .btn {
+    padding: 0.65rem 1.4rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .initiative-hero {
+    padding: 4rem 1.5rem;
+  }
+  
+  .initiative-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .initiative-overview,
+  .education-programs,
+  .resources,
+  .success-stories,
+  .get-involved {
+    padding: 3rem 1.5rem;
+  }
+  
+  .initiative-overview h2,
+  .education-programs h2,
+  .resources h2,
+  .success-stories h2,
+  .get-involved h2 {
+    font-size: 2rem;
+  }
+  
+  .initiative-overview p {
+    font-size: 1.1rem;
+  }
+  
+  .initiative-goals h3 {
+    font-size: 1.4rem;
+  }
+  
+  .initiative-goals li {
+    font-size: 1rem;
+  }
+  
+  .program-card,
+  .resource-card,
+  .story-card {
+    padding: 1.5rem;
+  }
+  
+  .program-card h3,
+  .resource-card h3,
+  .story-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .program-card p,
+  .resource-card p,
+  .story-card p {
+    font-size: 0.95rem;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.3rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .initiative-hero {
+    padding: 3rem 1rem;
+  }
+  
+  .initiative-hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .initiative-hero p {
+    font-size: 1rem;
+  }
+  
+  .initiative-overview,
+  .education-programs,
+  .resources,
+  .success-stories,
+  .get-involved {
+    padding: 2.5rem 1rem;
+  }
+  
+  .initiative-overview h2,
+  .education-programs h2,
+  .resources h2,
+  .success-stories h2,
+  .get-involved h2 {
+    font-size: 1.6rem;
+  }
+  
+  .initiative-overview p {
+    font-size: 1rem;
+    margin: 0 auto 1.5rem;
+  }
+  
+  .initiative-goals h3 {
+    font-size: 1.3rem;
+  }
+  
+  .program-card,
+  .resource-card,
+  .story-card {
+    padding: 1.2rem;
+  }
+  
+  .program-card h3,
+  .resource-card h3,
+  .story-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .btn {
+    padding: 0.55rem 1.2rem;
+    font-size: 0.85rem;
+    width: 100%;
+    text-align: center;
+    min-width: 110px; /* Ensure minimum touch target size */
+  }
+  
+  .program-stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .initiative-hero h1 {
+    font-size: 1.6rem;
+  }
+  
+  .initiative-overview h2,
+  .education-programs h2,
+  .resources h2,
+  .success-stories h2,
+  .get-involved h2 {
+    font-size: 1.5rem;
+  }
+  
+  .program-card,
+  .resource-card,
+  .story-card {
+    padding: 1rem;
+  }
+  
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    min-width: 100px; /* Ensure minimum touch target size */
+  }
+}

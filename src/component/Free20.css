@@ -1,0 +1,143 @@
+/* src/components/Free20.css */
+
+.free20-section {
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+}
+
+.top-banner {
+  background-color: #8B0000; /* Dark red */
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.top-banner h1 {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.text-side {
+  flex: 1;
+  max-width: 500px;
+  min-width: 0; /* Allows flex item to shrink below content size */
+}
+
+.highlight-text {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin: 0 0 1rem 0;
+}
+
+.highlight-text .red {
+  color: #8B0000;
+}
+
+.highlight-text .green {
+  color: #2A6B56;
+}
+
+.highlight-text .orange {
+  color: #CC7722;
+}
+
+.bold-text {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: black;
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+.image-side {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  min-width: 0; /* Allows flex item to shrink below content size */
+}
+
+.campaign-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.campaign-image:hover {
+  transform: scale(1.02);
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+  .main-content {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+  }
+
+  .text-side {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .highlight-text {
+    font-size: 2rem;
+  }
+
+  .bold-text {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-banner {
+    padding: 0.8rem 0;
+  }
+
+  .top-banner h1 {
+    font-size: 1.5rem;
+  }
+
+  .main-content {
+    padding: 2.5rem 1rem;
+  }
+
+  .highlight-text {
+    font-size: 1.8rem;
+  }
+
+  .bold-text {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-banner h1 {
+    font-size: 1.3rem;
+  }
+
+  .highlight-text {
+    font-size: 1.5rem;
+  }
+
+  .bold-text {
+    font-size: 1.4rem;
+  }
+}

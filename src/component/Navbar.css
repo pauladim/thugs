@@ -1,0 +1,203 @@
+/* src/components/Navbar.css */
+
+.main-navbar {
+  width: 100%;
+  max-width: 100vw;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.main-navbar-glass {
+  width: 100%;
+  max-width: 100%;
+  height: 72px;
+  margin: 0;
+  padding: 0 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 132, 8, 0.65),
+    rgba(92, 206, 16, 0.85)
+  );
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border-radius: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+/* Logo — BOLD & VISIBLE */
+.main-navbar-logo img {
+  height: 45px; /* Increased height for more visibility */
+  object-fit: contain;
+  filter: brightness(1.4) contrast(1.2) saturate(1.3); /* Enhanced visibility */
+  transition: transform 0.2s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Bolder border for definition */
+  border-radius: 4px; /* More defined rounding */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+}
+
+.main-navbar-logo img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.5) contrast(1.3) saturate(1.4); /* Enhanced effect on hover */
+}
+
+/* Hamburger Button */
+.main-navbar-menu-btn {
+  width: 30px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-navbar-menu-btn span {
+  width: 100%;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.main-navbar-menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+  background: #CC7722;
+}
+
+.main-navbar-menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.main-navbar-menu-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+  background: #CC7722;
+}
+
+/* Backdrop for off-canvas menu */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Off-canvas menu */
+.off-canvas-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100vh;
+  background: rgba(204, 119, 34, 0.95);
+  z-index: 1000;
+  transition: right 0.3s ease;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  padding: 2rem 1.5rem;
+}
+
+.off-canvas-menu.active {
+  right: 0;
+}
+
+.menu-content {
+  position: relative;
+}
+
+.close-menu-btn {
+  position: relative;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+  font-size: 1.5rem;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 3rem;
+}
+
+.menu-list li {
+  margin-bottom: 1.5rem;
+}
+
+.menu-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+  display: block;
+  padding: 0.5rem;
+}
+
+.menu-list a:hover {
+  color: #A6D388;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+/* Responsive adjustments for logo visibility */
+@media (max-width: 768px) {
+  .main-navbar-glass {
+    height: 65px;
+    padding: 0 20px;
+  }
+  
+  .main-navbar-logo img {
+    height: 38px; /* Slightly smaller for mobile but still visible */
+    filter: brightness(1.5) contrast(1.3) saturate(1.4); /* Enhanced visibility on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-navbar-glass {
+    height: 60px;
+    padding: 0 15px;
+  }
+  
+  .main-navbar-logo img {
+    height: 35px; /* Optimized for smaller screens */
+    filter: brightness(1.6) contrast(1.4) saturate(1.5); /* Maximum visibility on small screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-navbar-logo img {
+    height: 50px; /* Larger size for desktop */
+    filter: brightness(1.4) contrast(1.2) saturate(1.3); /* Optimized visibility for desktop */
+  }
+}

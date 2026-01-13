@@ -1,0 +1,186 @@
+/* src/components/Donate.css */
+.call-to-action {
+  background: linear-gradient(135deg, #f9f9f9, #eaeaea);
+  padding: 5rem 2rem;
+  text-align: center;
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.call-to-action h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.call-to-action p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 0.9rem 2.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #cc7722; /* Burnt Yellow */
+  border: 2px solid #cc7722;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(204, 119, 34, 0.2);
+}
+
+.btn-secondary:hover {
+  background-color: transparent;
+  color: #cc7722;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(204, 119, 34, 0.3);
+}
+
+/* === BANK DONATION SECTION === */
+.bank-donation {
+  background: #000;
+  color: white !important;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 2.5rem;
+  text-align: center;
+  border: 2px solid #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.bank-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.bank-icon {
+  font-size: 1.5rem;
+  color: #ff5722;
+}
+
+.bank-header h3 {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+  letter-spacing: 0.03em;
+}
+
+.bank-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.bank-details {
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
+}
+
+.bank-nam {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff !important;
+  margin: 0.4rem 0;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+.account-nam {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #ffffff !important;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.bank-image-placeholder {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 150px;
+  border: 2px dashed #ff5722;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: rgba(255, 87, 34, 0.1);
+}
+
+.bank-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .call-to-action {
+    padding: 3rem 1.5rem;
+  }
+
+  .call-to-action h2 {
+    font-size: 2rem;
+  }
+
+  .call-to-action p {
+    font-size: 1rem;
+  }
+
+  .btn-secondary {
+    padding: 0.8rem 2rem;
+    font-size: 0.95rem;
+  }
+
+  .bank-donation {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .bank-info-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .bank-details {
+    min-width: auto;
+    text-align: center;
+  }
+
+  .bank-image-placeholder {
+    width: 120px;
+    height: 120px;
+  }
+
+  .bank-name {
+    font-size: 1.4rem;
+  }
+
+  .account-name {
+    font-size: 1rem;
+  }
+}

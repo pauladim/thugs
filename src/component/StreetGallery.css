@@ -1,0 +1,30 @@
+/* src/components/StreetGallery.css */
+
+.street-gallery {
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.full-width-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.full-width-image:hover {
+  transform: scale(1.01);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .full-width-image {
+    height: auto;
+  }
+}

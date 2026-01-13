@@ -1,0 +1,127 @@
+/* src/components/FundingOutcomes.css */
+
+.funding-outcomes {
+  display: flex;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.text-side {
+  flex: 1;
+  padding: 0 1rem;
+  min-width: 0; /* Allows flex item to shrink below content size */
+}
+
+.graphic-side {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  min-width: 0; /* Allows flex item to shrink below content size */
+}
+
+.campaign-graphic {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.campaign-graphic:hover {
+  transform: scale(1.01);
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section-header {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 4px;
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.section-header.blue {
+  background-color: #0066cc;
+}
+
+.section-header.gray {
+  background-color: #555;
+}
+
+.section-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 1rem 0;
+}
+
+.section-list {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.closing-statement {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.closing-statement p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+  .funding-outcomes {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+  }
+
+  .graphic-side,
+  .text-side {
+    width: 100%;
+  }
+
+  .campaign-graphic {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .funding-outcomes {
+    padding: 2.5rem 1rem;
+  }
+
+  .section-header {
+    font-size: 1.1rem;
+  }
+
+  .section-text,
+  .section-list {
+    font-size: 0.95rem;
+  }
+
+  .closing-statement p {
+    font-size: 0.95rem;
+  }
+}

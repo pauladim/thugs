@@ -1,0 +1,85 @@
+/* src/components/ProjectOverview.css */
+
+.project-overview {
+  padding: 4rem 2rem;
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black; /* Changed to black color */
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center; /* Content is centered */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.section-title:hover {
+  color: #CC7722;
+  transform: scale(1.02);
+}
+
+.section-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: black; /* Changed to black color */
+  margin: 0 auto; /* Centered text */
+  text-align: center; /* Centered text */
+  max-width: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.section-text:hover {
+  color: #555;
+  transform: translateX(5px);
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .project-overview {
+    padding: 3rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .project-overview {
+    padding: 2rem 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-text {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,226 @@
+/* Home.css - Styles for the Home component */
+
+.home-container {
+  /* margin-top: 5px;  */
+  min-height: calc(100vh - 5px);
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-container {
+    /* margin-top: 72px; */
+    min-height: calc(100vh - 72px);
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    /* margin-top: 72px; */
+    min-height: calc(100vh - 72px);
+  }
+}
+
+/* HeroSwiper Section - replacing the old hero section */
+.hero-swiper {
+  height: calc(100vh - 60px); /* Account for navbar height */
+  width: 100%;
+  position: relative;
+}
+
+/* Mission Section */
+.mission-section {
+  background-color: white;
+  text-align: center;
+}
+
+.mission-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.mission-section p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Programs Section */
+.programs-section {
+  background-color: #f8f9fa;
+}
+
+.programs-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 2rem;
+}
+
+.program-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.program-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.program-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  background-color: white;
+}
+
+.testimonials-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 2rem;
+}
+
+.testimonial-card {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.testimonial-card:before {
+  content: "\201C"; /* Left double quotation mark Unicode */
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 4rem;
+  color: #FF6F61;
+  opacity: 0.2;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-card cite {
+  font-style: normal;
+  color: #FF6F61;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* .home-container {
+    margin-top: 72px;
+  } */
+  
+  .mission-section h2,
+  .programs-section h2,
+  .testimonials-section h2 {
+    font-size: 2rem;
+  }
+  
+  .container {
+    padding: 40px 15px;
+  }
+  
+  .program-card,
+  .testimonial-card {
+    padding: 25px;
+  }
+  
+  .program-card h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .programs-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mission-section h2,
+  .programs-section h2,
+  .testimonials-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .program-card,
+  .testimonial-card {
+    padding: 20px;
+  }
+  
+  .program-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .mission-section p,
+  .program-card p,
+  .testimonial-card p {
+    font-size: 1rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .mission-section h2,
+  .programs-section h2,
+  .testimonials-section h2 {
+    font-size: 1.6rem;
+  }
+  
+  .program-card,
+  .testimonial-card {
+    padding: 18px;
+  }
+  
+  .program-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .mission-section p,
+  .program-card p,
+  .testimonial-card p {
+    font-size: 0.95rem;
+  }
+}

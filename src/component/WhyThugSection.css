@@ -1,0 +1,251 @@
+/* src/components/WhyThugSection.css */
+
+.why-thug-section {
+  display: flex;
+  width: 100%;
+  min-height: 500px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background-color: black;
+  /* Changed to black background */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.image-side {
+  width: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.child-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.child-image:hover {
+  transform: scale(1.02);
+}
+
+.text-side-right {
+  width: 50%;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: black;
+  /* Black background */
+  position: relative;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideInRight 0.8s ease forwards 0.3s;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  padding-right: 50px;
+  transition: all 0.3s ease;
+}
+
+.section-title:hover {
+  color: #CC7722;
+  transform: scale(1.02);
+}
+
+.section-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  color: #ddd;
+  padding-right: 80px;
+  transition: all 0.3s ease;
+}
+
+.section-text:hover {
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.read-more-button {
+  background: transparent;
+  color: #CC7722;
+  /* Burnt Yellow */
+  border: 2px solid #CC7722;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  display: inline-block;
+  min-width: 120px;
+  /* Ensure minimum touch target size */
+  text-decoration: none;
+}
+
+.read-more-button:hover {
+  background-color: #CC7722;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+  .why-thug-section {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .image-side {
+    width: 100%;
+    height: 300px;
+  }
+
+  .text-side-right {
+    width: 100%;
+    height: auto;
+  }
+
+  .text-side-right {
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-text {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .read-more-button {
+    align-self: center;
+    margin: 0 auto;
+    /* Center the button */
+  }
+}
+
+@media (max-width: 768px) {
+  .image-side {
+    height: 280px;
+  }
+
+  .text-side-right {
+    height: auto;
+  }
+
+  .text-side-right {
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-text {
+    font-size: 0.95rem;
+    padding-right: 0;
+  }
+
+  .read-more-button {
+    padding: 0.7rem 1.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-side {
+    height: 250px;
+  }
+
+  .text-side-right {
+    height: auto;
+  }
+
+  .text-side-right {
+    padding: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .read-more-button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+    width: auto;
+    /* Allow button to fit content */
+    min-width: 110px;
+    /* Ensure minimum touch target size */
+    width: auto;
+    /* Allow button to fit content */
+    min-width: 110px;
+    /* Ensure minimum touch target size */
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .image-side {
+    height: 220px;
+  }
+
+  .text-side-right {
+    height: auto;
+  }
+
+  .text-side-right {
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-text {
+    font-size: 0.85rem;
+  }
+
+  .read-more-button {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+    min-width: 100px;
+    /* Ensure minimum touch target size */
+  }
+}
