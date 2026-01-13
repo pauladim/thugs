@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./Navbar.css";
+import logo from "../../public/vin.png"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +24,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="main-navbar-logo">
             <a href="/">
-              <img src="../public/vin.png" alt="" />
+              <img src={logo} alt="" />
             </a>
           </div>
 
