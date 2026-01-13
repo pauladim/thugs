@@ -41,6 +41,7 @@
 
 /* Logo — BOLD & VISIBLE */
 .main-navbar-logo img {
+  width: auto;
   height: 45px; /* Increased height for more visibility */
   object-fit: contain;
   filter: brightness(1.4) contrast(1.2) saturate(1.3); /* Enhanced visibility */
