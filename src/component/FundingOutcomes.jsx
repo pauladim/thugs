@@ -17,7 +17,6 @@ const FundingOutcomes = () => {
             <li>Reach out to brands and corporate organizations for sponsorship and support.</li>
             <li>Organize community donation rallies to engage the public.</li>
             <li>Partner with schools to raise awareness and gather support.</li>
-            <li>Collaborate with celebrities to endorse and support the project.</li>
             <li>Engage with major churches to promote the project and gather support.</li>
           </ol>
         </div>
