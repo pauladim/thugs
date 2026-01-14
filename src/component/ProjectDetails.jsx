@@ -39,14 +39,14 @@ const ProjectDetails = () => {
                 <li>Wardrobe and welfare support (₦150,000 per individual for 3 months = ₦450,000 total for each individual).</li>
               </ul>
             </li>
-            <li>Community engagement and fundraising efforts, including:
+            {/* <li>Community engagement and fundraising efforts, including:
               <ul className="nested-list">
                 <li>Reaching out to brands and corporate organizations for support.</li>
                 <li>Organizing community donation rallies.</li>
                 <li>Partnering with schools and churches.</li>
                 <li>Collaborating with celebrities for endorsement and support.</li>
               </ul>
-            </li>
+            </li> */}
           </ol>
         </div>
 
