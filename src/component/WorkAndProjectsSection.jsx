@@ -31,7 +31,7 @@ professional growth, - Provision of resources, such as (equipment, housing, and 
 need.
           </p>
           <Link to="/Project">
-            <button className="our-work-button">OUR WORK</button>
+            <button className="our-work-button">OUTREACH</button>
           </Link>
         </div>
 
