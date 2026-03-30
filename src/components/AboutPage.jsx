@@ -275,7 +275,7 @@ export default function AboutPage() {
               initial: "RP",
             },
             { name: "Unamba Anthony", role: "Co-Founder", initial: "UA" },
-            { name: "Juliana Ferdinand", role: "Medical Aid Coordinator", initial: "JF" },
+            // { name: "Juliana Ferdinand", role: "Medical Aid Coordinator", initial: "JF" },
             { name: "Dr.Ajidahun Shina", role: "Chief Medical Aid Coordinator", initial: "AS" },
           ].map(({ name, role, initial }) => (
             <div

@@ -22,7 +22,7 @@ export default function HomePage({ setPage }) {
               <span className="line2">We Are Human.</span>
             </h1>
             <p className="hero-sub">
-              Breaking stigma, challenging, stereotype, providing platform for strong telling, proving access to Rehabilitation, Recovery, and Reintegration.
+          Breaking stigma, challenging stereotypes, providing a platform for storytelling, and offering access to rehabilitation, recovery and reintegration.
               ONE LIFE AT A TIME
             </p>
             <div className="hero-actions">

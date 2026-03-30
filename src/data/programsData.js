@@ -34,7 +34,7 @@ export const programs = [
     icon: "👕",
     bg: "3merch.jpeg", images: programImages.merch, t: "Purchase DrugFree'20 Merch",
     tags: ["Support", "Awareness"],
-    d: "Wear hope and stand with us. Our DrugFree'20 merchandise (shirts, caps, and more) isn't just apparel — it's a symbol of commitment to a drug-free life. Every purchase funds recovery programs and spreads the message that 'We Are Not Thugs'.",
+    d: "Wear hope and stand with us. Our DrugFree'20 merchandise (shirts, caps, and more) isn't just apparel, it's a symbol of commitment to a drug-free life. Every purchase funds recovery programs and spreads the message that 'We Are Not Thugs'.",
     points: [
       "send us a Dm",
     ],
