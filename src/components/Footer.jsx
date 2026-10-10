@@ -1,120 +1,109 @@
-import { programs } from "../data/programsData";
+import { Link } from 'react-router-dom'
+import { Instagram, Youtube } from 'lucide-react'
+import { org, navLinks } from '../data/siteContent.js'
+import { programs } from '../data/programs.js'
 
-const socialLinks = [
-  {
-    name: "X",
-    url: "https://x.com/rectorpascal",
-    icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-      </svg>
-    )
-  },
-  {
-    name: "TikTok",
-    url: "https://tiktok.com/@rector_pascal",
-    icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.16-3.44-3.37-3.46-5.7-.02-1.29.3-2.58.95-3.71A5.987 5.987 0 0 1 7.04 8.78v4.21a1.944 1.944 0 0 0-1.02.9c-.3.57-.4 1.23-.27 1.86.15.75.59 1.41 1.2 1.82.78.52 1.82.63 2.68.31.57-.22 1.05-.63 1.35-1.15.35-.61.47-1.33.43-2.04.01-4.89-.04-9.78.03-14.67z" />
-      </svg>
-    )
-  },
-  {
-    name: "Instagram",
-    url: "https://instagram.com/rectorpascal",
-    icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-      </svg>
-    )
-  },
-  {
-    name: "YouTube",
-    url: "https://youtube.com/@rectorpascal",
-    icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-        <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-      </svg>
-    )
-  }
-];
+export default function Footer() {
+  const year = new Date().getFullYear()
 
-export default function Footer({ setPage, setSelectedProgram }) {
   return (
-    <footer className="footer">
-      <div className="footer-grid">
-        <div className="footer-brand">
-          <span className="logo">WE ARE NOT THUGS</span>
-          <p className="tagline">
-            A movement redefining narratives, rebuilding communities, and
-            restoring dignity to those society has mislabeled.
+    <footer className="bg-ink text-cream">
+      <div className="container-page grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-4 lg:py-20">
+        <div className="flex flex-col gap-4 lg:col-span-1">
+          <Link to="/" className="flex items-center gap-2.5">
+            <span className="flex h-9 w-9 items-center justify-center ">
+              {/* <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M3 19 L9 7 L12 13 L15 7 L21 19"
+                  stroke="#C65D2E"
+                  strokeWidth="2.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg> */}
+              <img src="correctorangeremovebg.png" alt="" />
+            </span>
+            {/* <span className="font-display text-[17px] text-cream">We Are Not Thugs</span> */}
+          </Link>
+          <p className="max-w-[26ch] text-sm leading-relaxed text-cream/65">
+           A movement redefining narratives, rebuilding communities, and restoring dignity to those society has mislabeled.
           </p>
-          <div className="socials" style={{ marginTop: "1.5rem" }}>
-            {socialLinks.map((social, i) => (
-              <a
-                key={i}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-btn"
-                aria-label={social.name}
-                style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'inherit' }}
-              >
-                {social.icon}
-              </a>
-            ))}
+          <div className="mt-2 flex items-center gap-4">
+            <a href={org.social.instagram} aria-label="Instagram" className="text-cream/60 hover:text-rust">
+              <Instagram size={18} />
+            </a>
+            <a href={org.social.twitter} aria-label="X (Twitter)" className="text-cream/60 hover:text-rust">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.214-6.817-5.963 6.817H1.684l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" />
+              </svg>
+            </a>
+            <a href={org.social.tiktok} aria-label="TikTok" className="text-cream/60 hover:text-rust">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-3.77h-3.18v13.3a2.87 2.87 0 1 1-2.87-2.87c.3 0 .59.05.86.13V10.2a6.1 6.1 0 1 0 5.19 6.02V9.48a8.05 8.05 0 0 0 4.71 1.52V7.82a4.84 4.84 0 0 1-.94-.13Z" />
+              </svg>
+            </a>
+            <a href={org.social.youtube} aria-label="YouTube" className="text-cream/60 hover:text-rust">
+              <Youtube size={18} />
+            </a>
           </div>
         </div>
-        <div className="footer-col">
-          <h4>Navigate</h4>
-          {["Home", "About", "Programs", "Projects", "Contact"].map((p) => (
-            <span
-              key={p}
-              className="footer-link"
-              onClick={() => setPage(p)}
-            >
-              {p}
-            </span>
-          ))}
+
+        <div>
+          <h3 className="text-sm font-semibold text-cream/50">Navigate</h3>
+          <ul className="mt-4 flex flex-col gap-3">
+            {navLinks.map((link) => (
+              <li key={link.to}>
+                <Link to={link.to} className="text-[15px] text-cream/80 hover:text-cream">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="footer-col">
-          <h4>Programs</h4>
-          {programs.map((p) => (
-            <span
-              key={p.t}
-              className="footer-link"
-              onClick={() => {
-                setSelectedProgram(p);
-                setPage("ProgramDetail");
-              }}
-            >
-              {p.t}
-            </span>
-          ))}
+
+        <div>
+          <h3 className="text-sm font-semibold text-cream/50">Programs</h3>
+          <ul className="mt-4 flex flex-col gap-3">
+            {programs.slice(0, 5).map((program) => (
+              <li key={program.id}>
+                <Link to="/programs" className="text-[15px] text-cream/80 hover:text-cream">
+                  {program.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="footer-col">
-          <h4>Get Involved</h4>
-          {[
-            { label: "Volunteer", page: "Contact" },
-            { label: "Donate", page: "Donate" },
-          ].map((item) => (
-            <span
-              key={item.label}
-              className="footer-link"
-              onClick={() => setPage(item.page)}
-            >
-              {item.label}
-            </span>
-          ))}
+
+        <div>
+          <h3 className="text-sm font-semibold text-cream/50">Get in touch</h3>
+          <ul className="mt-4 flex flex-col gap-3 text-[15px] text-cream/80">
+            <li>{org.email}</li>
+            <li>{org.phone}</li>
+            <li>{org.address}</li>
+            <li>{org.officeHours}</li>
+          </ul>
+          <Link
+            to="/donate"
+            className="mt-5 inline-flex items-center gap-2 rounded-sm bg-rust px-5 py-2.5 text-sm font-semibold text-cream hover:bg-rust-dark"
+          >
+            Donate now
+          </Link>
         </div>
       </div>
-      <div className="footer-bottom">
-        <span>© 2026 We Are Not Thugs Movement. All rights reserved.</span>
-        <span>Built with purpose · Driven by justice</span>
+
+      <div className="rule border-cream/10">
+        <div className="container-page flex flex-col gap-3 py-6 text-xs text-cream/45 sm:flex-row sm:items-center sm:justify-between">
+          <p>&copy; {year} We Are Not Thugs. All rights reserved.</p>
+          <div className="flex gap-6">
+            <Link to="/contact" className="hover:text-cream/70">
+              Privacy Policy
+            </Link>
+            <Link to="/contact" className="hover:text-cream/70">
+              Terms
+            </Link>
+          </div>
+        </div>
       </div>
     </footer>
-  );
+  )
 }
