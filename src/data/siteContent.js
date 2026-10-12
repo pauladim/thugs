@@ -68,7 +68,7 @@ export const missionVision = {
 export const team = [
   { name: 'Rector Pascal', role: 'Founder', image: '/founder.jpeg' },
   { name: 'Unamba Anthony', role: 'Co-Founder', image: '/unamo.jpeg' },
-  { name: 'Dr.Ajidahun Olusina', role: ' Medical Practitioner', image: '/shinasud.jpeg' },
+  { name: 'Dr.Ajidahun Olusina', role: ' Medical Director', image: '/shinasud.jpeg' },
   // {name: 'Ferdinand Julianna', role: 'Clinical Coordinator', image: '/seun.jpeg' },
 ]
 
